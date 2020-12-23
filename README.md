@@ -1,5 +1,9 @@
 # mfpmisc
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/marcpaterno/mfpmisc/workflows/R-CMD-check/badge.svg)](https://github.com/marcpaterno/mfpmisc/actions)
+<!-- badges: end -->
+
 This is collection of functions that are useful in your regular R workflow.
 No function in this package is expected to appear in R scripts.
 It is intended that this package can be attached (*e.g.* in your .Rprofile)

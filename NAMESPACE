@@ -2,4 +2,6 @@
 
 export(ls.objects)
 export(lsos)
+export(lspackages)
+importFrom(utils,installed.packages)
 importFrom(utils,object.size)

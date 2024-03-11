@@ -55,3 +55,91 @@ lsos <- function(..., n=10) {
   ls.objects(..., order.by="Size", decreasing=TRUE, head=TRUE, n=n)
 }
 
+#' List installed packages
+#'
+#' @return a data.frame
+#' @export
+#' @importFrom utils installed.packages
+lspackages <- function() {
+  result <- installed.packages() |> as.data.frame()
+  result$License_is_FOSS <- factor(result$License_is_FOSS)
+  result$License_restritcs_us <- factor(result$License_restricts_use)
+  result$NeedsCompilation <- factor(result$NeedsCompilation)
+  result$Built <- factor(result$Built)
+  result
+}
+
+#' Create a new Quarto document file.
+#'
+#' @param filename the filename for the new document
+
+make_document <- function(filename)
+{
+  if (checkmate::test_file_exists(filename)) {
+    msg <- paste0("The file '", filename, "' already exists")
+    stop(msg)
+  }
+  newfile <- file(filename, open="wt")
+  txt <-
+r"{---
+  title: "Document Title"
+  author: "Marc Paterno"
+  date: last-modified
+  format:
+    html:
+    css: custom.css
+  toc: true
+  code-overflow: wrap
+  theme: tufte
+  grid:
+    margin-width: 350px
+  reference-location: margin
+  citation-location: margin
+
+  execute:
+    echo: false
+---
+```{r setup, include=FALSE}
+  library(tidyverse)
+  library(lucid)
+  library(mfptools)
+  source("functions.R")
+  knitr::opts_chunk$set(
+    include=TRUE,
+    echo=FALSE,
+    message=FALSE,
+    warning=FALSE
+  )
+```
+
+}"
+  writeLines(txt, newfile)
+  close(newfile)
+
+  css_file <- file("custom.css", open="wt")
+  txt <-
+r"{
+.title {
+  color: darkblue;
+  font-size: 3em;
+}
+
+body {
+  font-size: 100%;
+}
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+.cell-output-display p {
+  color: red;
+  text-align: center;
+}
+}"
+  writeLines(txt, css_file)
+  close(css_file)
+}

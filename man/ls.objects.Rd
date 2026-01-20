@@ -9,15 +9,15 @@ ls.objects(pos = 1, pattern, order.by, decreasing = FALSE, head = FALSE, n = 5)
 \arguments{
 \item{pos}{position on the search list for the environment to be listed}
 
-\item{pattern}{an optional regular expression; only names matching `pattern` are listed}
+\item{pattern}{an optional regular expression; only names matching \code{pattern} are listed}
 
 \item{order.by}{optional name of column by which to order output}
 
 \item{decreasing}{if TRUE, order by decreasing value of sort column}
 
-\item{head}{if FALSE, return all rows. If true, return `n` rows}
+\item{head}{if FALSE, return all rows. If true, return \code{n} rows}
 
-\item{n}{the number of rows to return if `head` is true}
+\item{n}{the number of rows to return if \code{head} is true}
 }
 \value{
 a data.frame

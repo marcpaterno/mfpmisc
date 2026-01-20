@@ -8,6 +8,14 @@
 \description{
 A collection of functions that are useful in your regular R workflow. No function in this package is expected to appear in R scripts. It is intended that this package can be attached (*e.g.* in your .Rprofile) without much risk of introducing irreproducibility into the scripts you write. This is because functions in this package are intended for interactive use, and not for use in scripts.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/marcpaterno/mfpmisc}
+  \item Report bugs at \url{https://github.com/marcpaterno/mfpmisc/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Marc Paterno \email{marc.paternot@gmail.com} (\href{https://orcid.org/0000-0003-0808-8388}{ORCID})
 

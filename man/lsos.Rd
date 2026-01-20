@@ -7,7 +7,7 @@
 lsos(..., n = 10)
 }
 \arguments{
-\item{...}{arguments passed to `ls.objects`}
+\item{...}{arguments passed to \code{ls.objects}}
 
 \item{n}{number of rows to return}
 }

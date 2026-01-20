@@ -63,7 +63,7 @@ lsos <- function(..., n=10) {
 lspackages <- function() {
   result <- installed.packages() |> as.data.frame()
   result$License_is_FOSS <- factor(result$License_is_FOSS)
-  result$License_restritcs_us <- factor(result$License_restricts_use)
+  result$License_restricts_use <- factor(result$License_restricts_use)
   result$NeedsCompilation <- factor(result$NeedsCompilation)
   result$Built <- factor(result$Built)
   result
@@ -72,6 +72,7 @@ lspackages <- function() {
 #' Create a new Quarto document file.
 #'
 #' @param filename the filename for the new document
+#' @export
 
 make_document <- function(filename)
 {

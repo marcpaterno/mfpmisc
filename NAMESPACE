@@ -3,5 +3,6 @@
 export(ls.objects)
 export(lsos)
 export(lspackages)
+export(make_document)
 importFrom(utils,installed.packages)
 importFrom(utils,object.size)

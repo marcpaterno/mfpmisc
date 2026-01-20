@@ -1,3 +1,7 @@
 ^mfpmisc\.Rproj$
 ^\.Rproj\.user$
 ^\.github$
+^\.vscode$
+^\.Rhistory$
+^README\.Rmd$
+^cran-comments\.md$

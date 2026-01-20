@@ -1,0 +1,5 @@
+{
+  "r.test.framework": "testthat",
+  "r.test.testDirectory": "tests/testthat",
+  "r.test.testPattern": "^test.*\\.[rR]$"
+}

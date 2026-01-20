@@ -1,2 +1,8 @@
 .Rproj.user
 .Rhistory
+.Rdata
+.httr-oauth
+docs/
+*.tar.gz
+*.tgz
+.DS_Store
